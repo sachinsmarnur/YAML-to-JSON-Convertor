@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAML to JSON Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <p id="errorOutput"></p>
+      <div class="main-content">
+        <div class="input-section">
+          <div class="textarea-container">
+            <div class="line-numbers" id="yamlLineNumbers"></div>
+            <textarea
+              id="yamlInput"
+              placeholder="Enter YAML here..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="center-section">
+          <div class="search-replace">
+            <input type="text" id="searchTerm" placeholder="Search term" />
+            <input type="text" id="replaceTerm" placeholder="Replace with" />
+            <button id="searchReplaceButton">Search & Replace</button>
+          </div>
+          <button id="verifyFormatButton">Verify Format or Change</button>
+          <button id="convertButton">Convert to JSON</button>
+          <button id="clearButton">Clear</button>
+          <button id="uploadButton">Upload YAML</button>
+          <button id="toggleConversionButton">Switch to JSON to YAML</button>
+          <button id="copyButton" disabled>Copy to Clipboard</button>
+          <button id="downloadButton" disabled>Download JSON</button>
+        </div>
+
+        <div class="output-section">
+          <div class="textarea-container">
+            <div class="line-numbers" id="jsonLineNumbers"></div>
+            <textarea
+              id="jsonOutput"
+              placeholder="JSON output..."
+              readonly
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
